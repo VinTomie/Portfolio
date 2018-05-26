@@ -1,0 +1,35 @@
+/**
+ * JavaScript for the Rutgers custom search box.
+ */
+(function($) {
+  // Modify the submit URL based on select choice.
+  RUSearchSubmitAlter = function(url) {
+    document.rusearch.action = url;
+  },
+  // Clear search box on click.
+  Drupal.behaviors.RUSearchClear = {
+    attach: function(context, settings) {
+      $('input#rusearchbox').focus(function() {
+        if ($(this).val() == 'SEARCH') {
+          $(this).val('');
+        }
+      });
+      $('input#rusearchbox').blur(function() {
+        if ($(this).val() == '') {
+          $(this).val('SEARCH');
+        }
+      });
+    }
+  }
+  // append the site url for local site searches.
+  Drupal.behaviors.RUSearchAppend = {
+    attach: function(context, settings) {
+      $('#rusearch').submit(function () {
+        if ($('#rusearchselect option:selected').text() == 'This site') {
+          $('#rusearchbox').val($('#rusearchbox').val().concat(' site:', $(location).attr('hostname')));
+        };
+      });
+    }
+  }
+})(jQuery);
+;

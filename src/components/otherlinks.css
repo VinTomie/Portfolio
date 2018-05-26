@@ -1,0 +1,38 @@
+
+#linksback {
+	display: inline-block;
+	max-width: 100%;
+	opacity: 1;
+	width: 100%;
+}
+
+
+#newbruns {
+	float: left;
+	width: 33%;
+	height: 400px;
+}
+
+#newbruns:hover {
+	opacity: 0.7;
+}
+
+#mainpage {
+	float: center;
+	width: 33%;
+	height: 300px;
+}
+
+#mainpage:hover {
+	opacity: 0.7;
+}
+
+#searchpage {
+	float: right;
+	width: 33%;
+	height: 400px;
+}
+
+#searchpage:hover {
+	opacity: 0.7;
+}

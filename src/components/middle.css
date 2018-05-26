@@ -1,0 +1,17 @@
+
+#neuronimage {
+	max-width: 140%;
+	height: auto;
+	float: left;
+}
+
+#neuron {
+	opacity: 1;
+	width: 600px;
+	height: 430px;
+	float: left;
+}
+
+#neuron:hover {
+	opacity: 0.7;
+}

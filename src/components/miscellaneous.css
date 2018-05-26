@@ -1,0 +1,17 @@
+
+#raccoonimage {
+	max-width: 100%;
+	height: auto;
+	float: right;
+}
+
+#tail {
+	opacity: 1;
+	width: 100% - 200px;
+	height: 800px;
+	float: right;
+}
+
+#tail:hover {
+	opacity: 0.7;
+}
